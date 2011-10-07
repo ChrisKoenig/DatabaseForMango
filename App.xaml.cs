@@ -68,17 +68,15 @@ namespace DatabaseForMango
             if (!db.DatabaseExists())
             {
                 db.CreateDatabase();
-                DatabaseSchemaUpdater updater = db.CreateDatabaseSchemaUpdater();
+                var updater = db.CreateDatabaseSchemaUpdater();
                 updater.DatabaseSchemaVersion = 1;
                 updater.Execute();
             }
             else
             {
-                DatabaseSchemaUpdater updater = db.CreateDatabaseSchemaUpdater();
+                var updater = db.CreateDatabaseSchemaUpdater();
                 if (updater.DatabaseSchemaVersion < 2)
                 {
-                    // make changes here
-                    // update to new schema version
                 }
             }
         }
