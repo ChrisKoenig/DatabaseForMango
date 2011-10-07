@@ -51,19 +51,19 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True"
                               IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png"
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.add.rest.png"
                                             x:Name="AddButton"
                                             Click="AddButton_Click"
                                             Text="Add" />
-            <shell:ApplicationBarIconButton IconUri="/Images/aaa.png"
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.save.rest.png"
                                             x:Name="UpdateButton"
                                             Click="UpdateButton_Click"
                                             Text="Update" />
-            <shell:ApplicationBarIconButton IconUri="/image.png"
+            <shell:ApplicationBarIconButton IconUri="/Toolkit.Content/ApplicationBar.Delete.png"
                                             x:Name="DeleteButton"
                                             Click="DeleteButton_Click"
                                             Text="Delete" />
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png"
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.refresh.rest.png"
                                             x:Name="RefreshButton"
                                             Click="RefreshButton_Click"
                                             Text="Refresh" />
