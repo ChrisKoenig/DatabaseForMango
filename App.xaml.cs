@@ -72,10 +72,10 @@ namespace DatabaseForMango
                 {
                     // make some updates
                     //
-                    //updater.AddTable<Log>();
-                    //updater.AddColumn<Widget>("CreatedDate");
-                    //updater.DatabaseSchemaVersion = 2;
-                    //updater.Execute();
+                    updater.AddTable<Log>();
+                    updater.AddColumn<Widget>("CreatedDate");
+                    updater.DatabaseSchemaVersion = 2;
+                    updater.Execute();
                 }
             }
         }

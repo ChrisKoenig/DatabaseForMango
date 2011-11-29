@@ -34,7 +34,6 @@ namespace DatabaseForMango.Models
         }
 
         // CategoryName
-
         private string _CategoryName;
 
         [Column]
