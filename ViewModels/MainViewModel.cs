@@ -50,6 +50,7 @@ namespace DatabaseForMango.ViewModels
                 WidgetName = "Widget " + counter,
                 WidgetCategory = counter % 2 == 0 ? _category1 : _category2,
             };
+
             db.Widgets.InsertOnSubmit(widget);
             db.SubmitChanges();
             counter += 1;
