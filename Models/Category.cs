@@ -51,22 +51,22 @@ namespace DatabaseForMango.Models
         }
 
         // Widgets
-        private EntitySet<Widget> _Widgets;
+        private EntitySet<Widget> _widgets;
 
         [Association(
-            Storage = "_Widgets",
+            Storage = "_widgets",
             ThisKey = "CategoryId",
             OtherKey = "_categoryId")]
         public EntitySet<Widget> Widgets
         {
-            get { return _Widgets; }
-            set { _Widgets.Assign(value); }
+            get { return _widgets; }
+            set { _widgets.Assign(value); }
         }
 
         // Assign handlers for the add and remove operations, respectively.
         public Category()
         {
-            _Widgets = new EntitySet<Widget>(
+            _widgets = new EntitySet<Widget>(
                 new Action<Widget>(this.attach_Widget),
                 new Action<Widget>(this.detach_Widget)
                 );
@@ -75,14 +75,12 @@ namespace DatabaseForMango.Models
         // Called during an add operation
         private void attach_Widget(Widget w)
         {
-            NotifyPropertyChanging("WidgetCategory");
             w.WidgetCategory = this;
         }
 
         // Called during a remove operation
         private void detach_Widget(Widget w)
         {
-            NotifyPropertyChanging("WidgetCategory");
             w.WidgetCategory = null;
         }
     }

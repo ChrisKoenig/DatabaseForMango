@@ -19,8 +19,6 @@ namespace DatabaseForMango.ViewModels
             else
             {
                 db = new WidgetDataContext();
-                var updater = db.CreateDatabaseSchemaUpdater();
-                DatabaseSchemaVersion = updater.DatabaseSchemaVersion;
                 Refresh();
             }
         }
