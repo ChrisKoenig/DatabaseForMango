@@ -2,7 +2,6 @@
 using System.Linq;
 using DatabaseForMango.Models;
 using GalaSoft.MvvmLight;
-using Microsoft.Phone.Data.Linq;
 
 namespace DatabaseForMango.ViewModels
 {

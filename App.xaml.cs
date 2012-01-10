@@ -65,19 +65,19 @@ namespace DatabaseForMango
                 updater.DatabaseSchemaVersion = 1;
                 updater.Execute();
             }
-            else
-            {
-                var updater = db.CreateDatabaseSchemaUpdater();
-                if (updater.DatabaseSchemaVersion < 2)
-                {
-                    // make some updates
-                    //
-                    updater.AddTable<Log>();
-                    //updater.AddColumn<Widget>("CreatedDate");
-                    updater.DatabaseSchemaVersion = 2;
-                    updater.Execute();
-                }
-            }
+            //else
+            //{
+            //    var updater = db.CreateDatabaseSchemaUpdater();
+            //    if (updater.DatabaseSchemaVersion < 2)
+            //    {
+            //        // make some updates
+            //        //
+            //        updater.AddTable<Log>();
+            //        //updater.AddColumn<Widget>("CreatedDate");
+            //        updater.DatabaseSchemaVersion = 2;
+            //        updater.Execute();
+            //    }
+            //}
         }
 
         // Code to execute when the application is launching (eg, from Start)

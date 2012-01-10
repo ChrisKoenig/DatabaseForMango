@@ -1,0 +1,61 @@
+<DatabaseForMango_ViewModels:MainViewModel xmlns:DatabaseForMango_ViewModels="clr-namespace:DatabaseForMango.ViewModels" xmlns:DatabaseForMango_Models="clr-namespace:DatabaseForMango.Models" DatabaseSchemaVersion="69" IsInDesignMode="True" IsInDesignModeStatic="False">
+	<DatabaseForMango_ViewModels:MainViewModel.SelectedWidget>
+		<DatabaseForMango_Models:Widget WidgetId="59" WidgetName="Quisque curabitur aenean">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="43" CategoryName="Maecenas class aliquam integer"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+	</DatabaseForMango_ViewModels:MainViewModel.SelectedWidget>
+	<DatabaseForMango_ViewModels:MainViewModel.Widgets>
+		<DatabaseForMango_Models:Widget WidgetId="57" WidgetName="Duis consequat vestibulum adipiscing">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="56" CategoryName="Phasellus cras mauris curae"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="53" WidgetName="Auctor nam convallis nunc parturient">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="83" CategoryName="Nullam donec aptent praesent"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="27" WidgetName="Est fusce lorem congue cursus">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="83" CategoryName="Etiam sed dis"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="43" WidgetName="Dictum morbi nulla">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="45" CategoryName="Dignissim vivamus"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="88" WidgetName="Lectus facilisis">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="30" CategoryName="Proin hac elementum"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="97" WidgetName="Adipiscing accumsan augue parturient fermentum">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="93" CategoryName="Vestibulum amet vestibulum aliquam ante"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="40" WidgetName="Bibendum fames blandit">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="48" CategoryName="Aliquet dolor arcu fringilla diam"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="66" WidgetName="Vestibulum vestibulum adipiscing">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="45" CategoryName="Dictumst libero ligula"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="14" WidgetName="Eget leo magnis">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="54" CategoryName="Litora felis luctus eleifend"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+		<DatabaseForMango_Models:Widget WidgetId="25" WidgetName="Elit hendrerit nec parturient facilisi">
+			<DatabaseForMango_Models:Widget.WidgetCategory>
+				<DatabaseForMango_Models:Category CategoryId="83" CategoryName="Habitasse mus"/>
+			</DatabaseForMango_Models:Widget.WidgetCategory>
+		</DatabaseForMango_Models:Widget>
+	</DatabaseForMango_ViewModels:MainViewModel.Widgets>
+</DatabaseForMango_ViewModels:MainViewModel>
