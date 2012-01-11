@@ -15,10 +15,10 @@ namespace DatabaseForMango.Models
         private int _WidgetId;
 
         [Column(
+            CanBeNull = false,
             IsPrimaryKey = true,
             IsDbGenerated = true,
-            DbType = "INT NOT NULL Identity",
-            CanBeNull = false,
+            //DbType = "INT NOT NULL Identity",
             AutoSync = AutoSync.OnInsert)]
         public int WidgetId
         {
@@ -75,5 +75,19 @@ namespace DatabaseForMango.Models
                 NotifyPropertyChanged("WidgetCategory");
             }
         }
+
+        //private DateTime _creationDate = DateTime.Now;
+
+        //[Column]
+        //public DateTime? CreationDate
+        //{
+        //    get { return _creationDate; }
+        //    set
+        //    {
+        //        NotifyPropertyChanging("CreationDate");
+        //        _creationDate = value;
+        //        NotifyPropertyChanged("CreationDate");
+        //    }
+        //}
     }
 }

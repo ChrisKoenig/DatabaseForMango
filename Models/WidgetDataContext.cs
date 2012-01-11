@@ -14,6 +14,7 @@ namespace DatabaseForMango.Models
 
         public Table<Widget> Widgets;
         public Table<Category> Categories;
+        //public Table<Log> Log;
 
         public List<Widget> GetWidgetsByFirstLetter(string firstLetter)
         {

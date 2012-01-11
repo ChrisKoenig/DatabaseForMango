@@ -61,9 +61,9 @@ namespace DatabaseForMango
             if (!db.DatabaseExists())
             {
                 db.CreateDatabase();
-                var updater = db.CreateDatabaseSchemaUpdater();
-                updater.DatabaseSchemaVersion = 1;
-                updater.Execute();
+                //var updater = db.CreateDatabaseSchemaUpdater();
+                //updater.DatabaseSchemaVersion = 1;
+                //updater.Execute();
             }
             //else
             //{
@@ -73,7 +73,8 @@ namespace DatabaseForMango
             //        // make some updates
             //        //
             //        updater.AddTable<Log>();
-            //        //updater.AddColumn<Widget>("CreatedDate");
+            //        updater.AddColumn<Widget>("SomeIntValue");
+            //        updater.AddColumn<Widget>("CreationDate");
             //        updater.DatabaseSchemaVersion = 2;
             //        updater.Execute();
             //    }
