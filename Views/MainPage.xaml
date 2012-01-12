@@ -52,9 +52,13 @@
         <shell:ApplicationBar IsVisible="True"
                               IsMenuEnabled="True">
             <shell:ApplicationBarIconButton IconUri="/icons/appbar.add.rest.png"
-                                            x:Name="AddButton"
-                                            Click="AddButton_Click"
-                                            Text="Add" />
+                                            x:Name="AddFromWidgetSideButton"
+                                            Click="AddFromWidgetSideButton_Click"
+                                            Text="Add Widget" />
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.add.rest.png"
+                                            x:Name="AddFromCategorySideButton"
+                                            Click="AddFromCategorySideButton_Click"
+                                            Text="Add Category" />
             <shell:ApplicationBarIconButton IconUri="/icons/appbar.save.rest.png"
                                             x:Name="UpdateButton"
                                             Click="UpdateButton_Click"
@@ -63,11 +67,10 @@
                                             x:Name="DeleteButton"
                                             Click="DeleteButton_Click"
                                             Text="Delete" />
-            <shell:ApplicationBarIconButton IconUri="/icons/appbar.refresh.rest.png"
-                                            x:Name="RefreshButton"
-                                            Click="RefreshButton_Click"
-                                            Text="Refresh" />
             <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="RefreshViewMenu"
+                                              Click="RefreshViewMenu_Click"
+                                              Text="Refresh View" />
                 <shell:ApplicationBarMenuItem x:Name="RefreshDataabaseMenu"
                                               Click="RefreshDataabaseMenu_Click"
                                               Text="Refresh Database" />

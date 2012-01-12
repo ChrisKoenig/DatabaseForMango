@@ -17,12 +17,17 @@ namespace DatabaseForMango.Views
             Loaded += (sender, e) => viewModel = this.DataContext as MainViewModel;
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
+        private void AddFromWidgetSideButton_Click(object sender, EventArgs e)
         {
-            viewModel.Add();
+            viewModel.AddFromWidgetSide();
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e)
+        private void AddFromCategorySideButton_Click(object sender, EventArgs e)
+        {
+            viewModel.AddFromCategorySide();
+        }
+
+        private void RefreshViewMenu_Click(object sender, EventArgs e)
         {
             viewModel.Refresh();
         }

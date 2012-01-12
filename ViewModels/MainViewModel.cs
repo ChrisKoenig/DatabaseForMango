@@ -40,12 +40,26 @@ namespace DatabaseForMango.ViewModels
             _category2 = db.Categories.Skip(1).Take(1).First();
         }
 
-        public void Add()
+        public void AddFromCategorySide()
+        {
+            var widget = new Widget()
+            {
+                WidgetName = "Widget " + counter
+            };
+            var category = counter % 2 == 0 ? _category2 : _category1;
+            category.Widgets.Add(widget);
+            db.Widgets.InsertOnSubmit(widget);
+            db.SubmitChanges();
+            counter += 1;
+            Refresh();
+        }
+
+        public void AddFromWidgetSide()
         {
             var widget = new Widget()
             {
                 WidgetName = "Widget " + counter,
-                WidgetCategory = counter % 2 == 0 ? _category1 : _category2,
+                WidgetCategory = counter % 2 == 0 ? _category2 : _category1,
             };
 
             db.Widgets.InsertOnSubmit(widget);
@@ -124,6 +138,8 @@ namespace DatabaseForMango.ViewModels
             db.Widgets.InsertOnSubmit(new Widget() { WidgetName = "Widget 3", WidgetCategory = _category1 });
             db.Widgets.InsertOnSubmit(new Widget() { WidgetName = "Widget 4", WidgetCategory = _category2 });
             db.Widgets.InsertOnSubmit(new Widget() { WidgetName = "Widget 5", WidgetCategory = _category1 });
+
+            counter = 6;
 
             db.SubmitChanges();
             Refresh();

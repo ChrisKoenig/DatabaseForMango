@@ -67,8 +67,8 @@ namespace DatabaseForMango.Models
         public Category()
         {
             _widgets = new EntitySet<Widget>(
-                new Action<Widget>(this.attach_Widget),
-                new Action<Widget>(this.detach_Widget)
+                    new Action<Widget>(this.attach_Widget),
+                    new Action<Widget>(this.detach_Widget)
                 );
         }
 
