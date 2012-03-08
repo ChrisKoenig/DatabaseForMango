@@ -7,10 +7,6 @@ namespace DatabaseForMango.Models
     [Table(Name = "Widgets")]
     public class Widget : TableObject
     {
-        // Version column aids update performance.
-        [Column(IsVersion = true)]
-        private Binary _version;
-
         // WidgetId
         private int _WidgetId;
 
@@ -52,7 +48,7 @@ namespace DatabaseForMango.Models
 
         // Category
         [Column]
-        internal int _categoryId;
+        private int? _categoryId;
 
         private EntityRef<Category> _category;
 
@@ -68,7 +64,11 @@ namespace DatabaseForMango.Models
             {
                 NotifyPropertyChanging("WidgetCategory");
                 _category.Entity = value;
-                if (value != null)
+                if (value == null)
+                {
+                    _categoryId = null;
+                }
+                else
                 {
                     _categoryId = value.CategoryId;
                 }
@@ -76,7 +76,11 @@ namespace DatabaseForMango.Models
             }
         }
 
-        //private DateTime _creationDate = DateTime.Now;
+        // Version column aids update performance.
+        [Column(IsVersion = true)]
+        private Binary _version;
+
+        //private DateTime? _creationDate = DateTime.Now;
 
         //[Column]
         //public DateTime? CreationDate

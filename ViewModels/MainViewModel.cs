@@ -72,7 +72,10 @@ namespace DatabaseForMango.ViewModels
         {
             if (SelectedWidget == null)
                 return;
-            db.Widgets.DeleteOnSubmit(SelectedWidget);
+            if (SelectedWidget.WidgetCategory != null)
+                SelectedWidget.WidgetCategory = null;
+            else
+                db.Widgets.DeleteOnSubmit(SelectedWidget);
             db.SubmitChanges();
             Refresh();
         }

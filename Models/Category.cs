@@ -1,24 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
+using System.Linq;
 
 namespace DatabaseForMango.Models
 {
     [Table(Name = "Categories")]
     public class Category : TableObject
     {
-        // Version column aids update performance.
-        [Column(IsVersion = true)]
-        private Binary _version;
-
         // CategoryId
         private int _CategoryId;
 
         [Column(
             IsPrimaryKey = true,
             IsDbGenerated = true,
-            DbType = "INT NOT NULL Identity",
             CanBeNull = false,
+            //DbType = "INT NOT NULL Identity",
             AutoSync = AutoSync.OnInsert)]
         public int CategoryId
         {
@@ -83,5 +81,9 @@ namespace DatabaseForMango.Models
         {
             w.WidgetCategory = null;
         }
+
+        // Version column aids update performance.
+        [Column(IsVersion = true)]
+        private Binary _version;
     }
 }

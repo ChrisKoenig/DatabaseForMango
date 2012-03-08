@@ -34,6 +34,8 @@ namespace DatabaseForMango
             // Phone-specific initialization
             InitializePhoneApplication();
 
+            #region profiling
+
             // Show graphics profiling information while debugging.
             if (System.Diagnostics.Debugger.IsAttached)
             {
@@ -53,6 +55,8 @@ namespace DatabaseForMango
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+
+            #endregion profiling
         }
 
         private static void SetupDb()
@@ -61,10 +65,18 @@ namespace DatabaseForMango
             if (!db.DatabaseExists())
             {
                 db.CreateDatabase();
-                //var updater = db.CreateDatabaseSchemaUpdater();
-                //updater.DatabaseSchemaVersion = 1;
-                //updater.Execute();
+
+                #region Set Initial Database Version
+
+                var updater = db.CreateDatabaseSchemaUpdater();
+                updater.DatabaseSchemaVersion = 1;
+                updater.Execute();
+
+                #endregion Set Initial Database Version
             }
+
+            #region DatabaseSchemaUpdater
+
             //else
             //{
             //    var updater = db.CreateDatabaseSchemaUpdater();
@@ -73,13 +85,21 @@ namespace DatabaseForMango
             //        // make some updates
             //        //
             //        updater.AddTable<Log>();
-            //        updater.AddColumn<Widget>("SomeIntValue");
             //        updater.AddColumn<Widget>("CreationDate");
             //        updater.DatabaseSchemaVersion = 2;
             //        updater.Execute();
+            //        foreach (var item in db.Widgets)
+            //        {
+            //            item.CreationDate = DateTime.Now;
+            //        }
+            //        db.SubmitChanges();
             //    }
             //}
+
+            #endregion DatabaseSchemaUpdater
         }
+
+        #region Unimportant stuff
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
@@ -161,4 +181,6 @@ namespace DatabaseForMango
 
         #endregion Phone application initialization
     }
+
+        #endregion Unimportant stuff
 }
